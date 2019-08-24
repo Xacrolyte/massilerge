@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Massilerge - Much more than your everyday Mail merger",
+  "short_name": "Massilerge",
+  "version": "1.0",
+  "description": "A powerful mass mail merger system made for Gmail on Firefox",
+  "icons": {
+    "64": "icons/icons8-email-open-64.png"
+  },
+  
+  "background": {
+    "persistent": false
+  },
+
+  "sidebar_action": {
+    "default_icon": {
+      "16": "icons/icons8-email-open-64",  
+    },
+    "default_title": "Massilerge-Sidebar",
+    "default_pannel": "sidebar/sidebar.html",
+    "open_at_install": true,
+  }
+  
+  "content_scripts": {
+    "css": [],
+    "js": [""],
+    "matches": ["https://mail.google.com/*", "http://mail.google.com/*", "https://inbox.google.com/*", "http://inbox.google.com/*"],
+    "run_at": "document_end"
+  }
+}
